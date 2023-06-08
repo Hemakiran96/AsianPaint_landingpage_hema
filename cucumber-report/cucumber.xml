@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="54.305" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="Landing web page" name="Verify painting experts functionality with valid data - Example #1.1" time="33.123">
+<system-out><![CDATA[
+Given Chrome is opened and Asain paints app is opened.......................passed
+Then User navigates on landing page.........................................passed
+When User enter "Hemakiran" and "Hemakiran@gmail.com" and "9999999999" and "533287".passed
+And User click on Whatsapp notification.....................................passed
+And User click on the Enqire Now button.....................................passed
+Then It Shows Thank you for your details  this message......................passed
+]]></system-out>
+</testcase>
+<testcase classname="Landing web page" name="Verify painting experts functionality with invalid data - Example #1.1" time="20.767">
+<system-out><![CDATA[
+Given Chrome is opened and Asain paints app is opened.......................passed
+Then User navigates on landing page.........................................passed
+When User enter "Hemakiran" and "Hemakiran@gmail.com" and "@@@@@@@@@@" and "533287".passed
+And User click on Whatsapp notification.....................................passed
+And User click on the Enqire Now button.....................................passed
+Then It Shows Enter invalid details.........................................passed
+]]></system-out>
+</testcase>
+</testsuite>

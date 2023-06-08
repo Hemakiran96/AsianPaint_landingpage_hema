@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="88.857" tests="3" skipped="0" failures="0" errors="0">
+<testcase classname="Landing web page" name="Validate user navigates to Landing Page" time="41.192">
+<system-out><![CDATA[
+Given Chrome is opened......................................................passed
+When User launches Asain paints.............................................passed
+Then User navigates on landing page.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Landing web page" name="Validate Landing page UI" time="29.518">
+<system-out><![CDATA[
+Given Chrome is opened......................................................passed
+When User launches Asian paints.............................................passed
+Then User navigates on landing page.........................................passed
+Then fields are visible on the landing page.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Landing web page" name="Validate Lanidng page fields" time="17.765">
+<system-out><![CDATA[
+When User launches Asian paints.............................................passed
+Then User navigates on landing page.........................................passed
+When User Enter the pincode in Find the store feild.........................passed
+Then User is Should able to Enter the pincode...............................passed
+]]></system-out>
+</testcase>
+</testsuite>
