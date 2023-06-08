@@ -14,17 +14,19 @@ import io.cucumber.java.en.When;
 public class LandingPage_Stepdefinitions1 extends Utility{
 	
 	public Landing_web_Page lwp;
+	public StoreLocatorPage slp;
 	public void objectMethod() throws IOException{
 		lwp = new Landing_web_Page();
+		slp = new StoreLocatorPage();
 	}
 	@Given("Chrome is opened and Asain paints app is opened")
 	public void chrome_is_opened_and_asain_paints_app_is_opened() throws IOException, InterruptedException {
 		objectMethod();
 		Utility.implicitWait();
 		Thread.sleep(10000);
-		lwp.Dontallow();
-		//lwp.noThanksButton();
-		//lwp.laterButton();
+		//lwp.Dontallow();
+		lwp.noThanksButton();
+		lwp.laterButton();
 		lwp.acceptCookiesButtonValidation();
 		logger = report.createTest("test01");
 		logger.log(Status.INFO, "Validating landing page link");
@@ -103,12 +105,12 @@ public class LandingPage_Stepdefinitions1 extends Utility{
         }
 		logger.log(Status.INFO, "Step3 is executed");
 	}
-	@When("User Enter the pincode in Find the store feild")
-	public void user_enter_the_pincode_in_find_the_store_feild() throws IOException, InterruptedException {
+	
+	@When("User Enter the pincode {string} in Find the store feild")
+	public void user_enter_the_pincode_in_find_the_store_feild(String pincode) throws IOException, InterruptedException {
 		objectMethod();
 		Utility.implicitWait();
 		Thread.sleep(10000);
-		
 		logger = report.createTest("test04");
 		logger.log(Status.INFO, "Validating landing page Image Dimensions");
         String actualDimension = lwp.Image();
@@ -124,7 +126,7 @@ public class LandingPage_Stepdefinitions1 extends Utility{
             captureScreenshotOnFailure();
             assert false;
         }
-        lwp.Storepincode();
+        lwp.Storepincode(pincode);
 		logger.log(Status.INFO, "Step4 is executed");
 		
 	}
@@ -137,7 +139,7 @@ public class LandingPage_Stepdefinitions1 extends Utility{
 		Utility.implicitWait();
 		
 		logger = report.createTest("test05");
-		String actualTitle = lwp.validateStoreLocatorPageTitle();
+		String actualTitle = slp.validateStoreLocatorPageTitle();
 		String expectedTitle = "Store Locator: Design Solutions for a Beautiful Home Makeover - Asian Paints";
 		assertEquals(expectedTitle, actualTitle);
         try {

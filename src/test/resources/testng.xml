@@ -4,6 +4,8 @@
   <test name="Test">
     <classes>
       <class name="testrunner.LandingPage_TestRunner"/>
+      <class name="testrunner.LandingPage_TestRunner2"/>
+      <class name="testrunner.LandingPage_TR_Excel"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

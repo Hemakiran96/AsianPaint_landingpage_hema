@@ -12,5 +12,5 @@ Feature: Landing web page
  Scenario: Validate Lanidng page fields
  		Given Chrome is opened and Asain paints app is opened
    	Then User navigates on landing page
-   	When User Enter the pincode in Find the store feild
+   	When User Enter the pincode "456456" in Find the store feild
     Then User is Should able to Enter the pincode 

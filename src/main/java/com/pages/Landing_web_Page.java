@@ -111,8 +111,8 @@ public class Landing_web_Page extends Utility{
 		return ValidateTitle();
 	}
 	//send keys to the filed validation
-	public void Storepincode() {
-		Storepincode.sendKeys("533287");
+	public void Storepincode(String pincode) {
+		Storepincode.sendKeys(pincode);
 	}
 	public void Storepincodes(String pincode) {
 		Storepincode.sendKeys(pincode);
@@ -156,11 +156,7 @@ public class Landing_web_Page extends Utility{
 	    js.executeScript("window.scrollBy(0,-350)","");
 	}
 	
-	//Getting other page title
-	public String validateStoreLocatorPageTitle() {
-        Utility.WindowHandles();
-		return validatePageTitle();
-    }
+	
 	//Notification block in frame
 	public void noThanksButton() throws IOException
     {

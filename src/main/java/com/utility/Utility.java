@@ -92,13 +92,5 @@ public class Utility extends Config {
 		File imageFile = new File(screenshotsPath + screenshotFileName + ".png");
 		FileUtils.copyFile(binaryFile, imageFile);
 	}
-	public static void WindowHandles() {
-		 String mainWindowHandle = driver.getWindowHandle();
-        Set<String> handles = driver.getWindowHandles();
-        Iterator<String> it = handles.iterator();
-        String parentId = (String) it.next();
-        String childId = (String) it.next();
-        driver.switchTo().window(childId);
-	}
 	
 }

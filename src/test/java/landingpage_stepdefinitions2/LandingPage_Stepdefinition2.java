@@ -31,9 +31,9 @@ public class LandingPage_Stepdefinition2 extends Utility{
 		objectMethod();
 		Utility.implicitWait();
 		Thread.sleep(10000);
-		lps.Dontallow();
-		//lps.noThanksButton();
-		//lps.laterButton();
+		//lps.Dontallow();
+		lps.noThanksButton();
+		lps.laterButton();
 		lps.acceptCookiesButtonValidation();
 		logger = report.createTest("test01");
 		logger.log(Status.INFO, "Validating landing page link");
@@ -97,7 +97,6 @@ public class LandingPage_Stepdefinition2 extends Utility{
 		objectMethod();
 		Utility.implicitWait();
 		lps.Whatsapp();
-		
 		logger.log(Status.INFO, "Step4 is executed");
 		
 	}
@@ -106,7 +105,6 @@ public class LandingPage_Stepdefinition2 extends Utility{
 		objectMethod();
 		lps.BookApointment();
 		Utility.implicitWait();
-		
 		logger.log(Status.INFO, "Step5 is executed");
 	   
 	}
@@ -115,7 +113,6 @@ public class LandingPage_Stepdefinition2 extends Utility{
 		objectMethod();
 		Utility.implicitWait();
 		lps.Thankyou();
-		
 		lps.captureScreenshot();
 		logger.log(Status.INFO, "Step6 is executed");
 		

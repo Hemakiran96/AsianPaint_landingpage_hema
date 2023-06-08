@@ -14,7 +14,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import java.util.List;
 import java.util.Map;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+
 import com.aventstack.extentreports.Status;
 import com.utility.Config;
 import com.utility.ExcelReader;
@@ -41,8 +41,8 @@ public class LandingPage_Stepdefinition_Excel extends Utility{
 		objectMethod();
 		Utility.implicitWait();
 		Thread.sleep(10000);
-		lps.Dontallow();
-		///lps.noThanksButton();
+		//lps.Dontallow();
+		lps.noThanksButton();
 		lps.laterButton();
 		lps.acceptCookiesButtonValidation();
 		logger = report.createTest("test01");
@@ -61,7 +61,6 @@ public class LandingPage_Stepdefinition_Excel extends Utility{
             assert false;
         }
         logger.log(Status.INFO, "Step1 is executed");
-	
 	
 	}
 
@@ -85,20 +84,12 @@ public class LandingPage_Stepdefinition_Excel extends Utility{
             assert false;
         }
         logger.log(Status.INFO, "Step2 is executed");
-		
-	   
 	}
 	@When("User enter sheetname {string} and rownumber {int}")
-	public void user_enter_sheetname_and_rownumber(String sheetName, Integer rowNumber ) throws IOException, InvalidFormatException, InterruptedException{
+	public void user_enter_sheetname_and_rownumber(String sheetName, Integer rowNumber ) throws Exception{
 		objectMethod();
         Utility.implicitWait();
-		try {
-			data = excelRead.readExcel("Sheet1");
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-
+		data = excelRead.readExcel("Sheet1");
 		for(int i=1; i<data.size(); i++) {
 			
 		lps.EnquireDetails(data.get(i));
@@ -119,7 +110,6 @@ public class LandingPage_Stepdefinition_Excel extends Utility{
 		objectMethod();
 		Utility.implicitWait();
 		lps.BookApointment();
-		
 		logger.log(Status.INFO, "Step4 is executed");
 		
 		

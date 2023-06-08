@@ -41,8 +41,7 @@ public class LandingPage_Excel extends Config {
 		while (itr.hasNext()) {
 			Row row = itr.next();
 
-			for (int i = 0; i <=row.getLastCellNum(); i++) {
-
+			for (int i = 0; i < row.getLastCellNum(); i++) {
 				Cell cell = row.getCell(i);
 
 				switch (i) {
@@ -73,6 +72,7 @@ public class LandingPage_Excel extends Config {
 
 			wb.close();
 		}
+		
 		return details;
 
 	}

@@ -16,7 +16,7 @@ public static WebDriver driver;
 	public static String screenshotsPath = projectPath + "\\screenshots\\";
 	public static String filePath = projectPath + "\\src\\main\\java\\com\\config\\config.properties";
 	
-	public static String excelPath = projectPath + "\\src\\main\\java\\com\\testdata\\asiandata.xlsx";
+	public static String excelPath = projectPath + "\\src\\main\\java\\com\\testdata\\AsianDataLP.xlsx";
 	
 	public static long PAGE_LOAD_TIMEOUT = 30;
 	public static long IMPLICIT_WAIT = 30;
