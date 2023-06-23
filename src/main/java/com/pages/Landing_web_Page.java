@@ -29,6 +29,9 @@ public class Landing_web_Page extends Utility{
 	@FindBy(xpath="//*[@id='headerNav']/div[1]/ul/li[5]/a[2]/span[1]")
     private WebElement Mouse3;
 	
+	//Xpath of Notification of Expert
+	@FindBy(xpath="//*[@class='iconLinks iconLinks__close close_btn closeExitPopup']")
+	private WebElement ExitPopUp;
 
 	@FindBy(xpath="//input[@id='enquire-name']")
     private WebElement EnquireName;
@@ -99,7 +102,7 @@ public class Landing_web_Page extends Utility{
    
    @FindBy(xpath="/html/body/div[1]/div/div[2]/div/div[13]/div/div[2]/a[4]/div[1]/picture/img")
    private WebElement image;
-    
+   
     
     
    
@@ -180,6 +183,12 @@ public class Landing_web_Page extends Utility{
         driver.switchTo().defaultContent();
 		
 	}
+	//Notification on the Screen POP Up
+	public void ExitPopUp() {
+        ExitPopUp.click();
+		
+		
+	}
 	//Notification block in Cookies
 	public void acceptCookiesButtonValidation() throws IOException{
 			acceptCookiesButton.click();
@@ -190,6 +199,7 @@ public class Landing_web_Page extends Utility{
 		System.out.println(linkText);
 		//System.out.println(Thankyou.getText());
 	}
+
 	public void CheckNumber() {
 		String linkText = MobileError.getText();
 		System.out.println(linkText);

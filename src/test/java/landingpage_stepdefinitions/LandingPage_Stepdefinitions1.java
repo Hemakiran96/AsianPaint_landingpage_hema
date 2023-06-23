@@ -23,10 +23,13 @@ public class LandingPage_Stepdefinitions1 extends Utility{
 	public void chrome_is_opened_and_asain_paints_app_is_opened() throws IOException, InterruptedException {
 		objectMethod();
 		Utility.implicitWait();
-		Thread.sleep(10000);
 		//lwp.Dontallow();
-		lwp.noThanksButton();
 		lwp.laterButton();
+		//driver.execute_script("window.stop();")
+		//lwp.ExitPopUp();
+		//Utility.pageLoad();
+		//lwp.noThanksButton();
+		//lwp.laterButton();
 		lwp.acceptCookiesButtonValidation();
 		logger = report.createTest("test01");
 		logger.log(Status.INFO, "Validating landing page link");
@@ -51,6 +54,7 @@ public class LandingPage_Stepdefinitions1 extends Utility{
 	public void user_navigates_on_landing_page() throws IOException, InterruptedException {
 		objectMethod();
 		Utility.implicitWait();
+		Thread.sleep(20000);
 		logger = report.createTest("test02");
 		logger.log(Status.INFO, "Validating landing page title");
         String actualTitle = lwp.validatePageTitle();
@@ -72,11 +76,15 @@ public class LandingPage_Stepdefinitions1 extends Utility{
 	@Then("fields are visible on the landing page")
 	public void fields_are_visible_on_the_landing_page() throws IOException, InterruptedException {
 		objectMethod();
+		Thread.sleep(20000);
 		Utility.implicitWait();
+		//lwp.ExitPopUp();
 		lwp.Mouseover1();
 		Utility.implicitWait();
+		Thread.sleep(20000);
 		lwp.Mouseover2();
 		Utility.implicitWait();
+		Thread.sleep(20000);
 		lwp.Mouseover3();
 		Utility.implicitWait();
 		lwp.MouseEnd();
@@ -110,7 +118,8 @@ public class LandingPage_Stepdefinitions1 extends Utility{
 	public void user_enter_the_pincode_in_find_the_store_feild(String pincode) throws IOException, InterruptedException {
 		objectMethod();
 		Utility.implicitWait();
-		Thread.sleep(10000);
+		Thread.sleep(20000);
+		//lwp.ExitPopUp();
 		logger = report.createTest("test04");
 		logger.log(Status.INFO, "Validating landing page Image Dimensions");
         String actualDimension = lwp.Image();
@@ -134,10 +143,8 @@ public class LandingPage_Stepdefinitions1 extends Utility{
 	public void user_is_should_able_to_enter_the_pincode() throws IOException, InterruptedException {
 		objectMethod();
 		Utility.implicitWait();
-		Thread.sleep(5000);
-		lwp.Findstore();
-		Utility.implicitWait();
-		
+		Thread.sleep(20000);
+		lwp.Findstore();		
 		logger = report.createTest("test05");
 		String actualTitle = slp.validateStoreLocatorPageTitle();
 		String expectedTitle = "Store Locator: Design Solutions for a Beautiful Home Makeover - Asian Paints";

@@ -30,9 +30,7 @@ public class LandingPage_Stepdefinition2 extends Utility{
 	public void chrome_is_opened_and_asain_paints_app_is_opened() throws IOException, InterruptedException {
 		objectMethod();
 		Utility.implicitWait();
-		Thread.sleep(10000);
-		//lps.Dontallow();
-		lps.noThanksButton();
+		
 		lps.laterButton();
 		lps.acceptCookiesButtonValidation();
 		logger = report.createTest("test01");
@@ -114,6 +112,21 @@ public class LandingPage_Stepdefinition2 extends Utility{
 		Utility.implicitWait();
 		lps.Thankyou();
 		lps.captureScreenshot();
+		logger = report.createTest("test06");
+		logger.log(Status.INFO, "Validating landing page title");
+        /*String actualTitle = lps.;
+        String expectedTitle = "thank-you-homepage-asian-paints";
+        try {
+            assertEquals(actualTitle, expectedTitle);
+            logger.log(Status.PASS, "Step6 is passed");
+            System.out.println(actualTitle);
+            assert true;
+        } catch (AssertionError e) {
+            e.printStackTrace();
+            logger.log(Status.FAIL, "Step6 is failed");
+            captureScreenshotOnFailure();
+            assert false;
+        }*/
 		logger.log(Status.INFO, "Step6 is executed");
 		
 	}

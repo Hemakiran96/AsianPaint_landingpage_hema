@@ -40,9 +40,9 @@ public class LandingPage_Stepdefinition_Excel extends Utility{
 	public void chrome_is_opened_and_asain_paints_app_is_opened() throws IOException, InterruptedException {
 		objectMethod();
 		Utility.implicitWait();
-		Thread.sleep(10000);
+		
 		//lps.Dontallow();
-		lps.noThanksButton();
+		//lps.noThanksButton();
 		lps.laterButton();
 		lps.acceptCookiesButtonValidation();
 		logger = report.createTest("test01");
